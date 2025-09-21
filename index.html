@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 مكتبة ماينكرافت</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .search-box {
+      margin: 20px auto;
+      max-width: 400px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: left;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* شريط التمرير */
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 10px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      flex: 0 0 300px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s, background 0.3s;
+      scroll-snap-align: start;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.2);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin: 10px 0 15px;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: #ff9800;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffc107;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(0,0,0,0.6);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 مكتبة ماينكرافت</h1>
+    <p>مودات و إصدارات ماينكرافت بيدروك</p>
+
+    <!-- صندوق البحث -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="ابحث عن مود أو إصدار...">
+    </div>
+  </header>
+
+  <!-- قسم إصدارات -->
+  <section id="bedrock" class="section">
+    <h2>🟢 إصدارات ماينكرافت بيدروك</h2>
+    <div class="slider">
+
+      <div class="card">
+        <h3>إصدار 1.20.10</h3>
+        <p>تحسينات في الأداء وإصلاح بعض الأخطاء.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/abcd1234" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a href="downloads/bedrock-1.20.10.apk" class="btn">تحميل الإصدار</a>
+      </div>
+
+      <div class="card">
+        <h3>إصدار 1.19.80</h3>
+        <p>إصدار أقدم يتضمن تحديثات مهمة.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/wxyz5678" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a href="downloads/bedrock-1.19.80.apk" class="btn">تحميل الإصدار</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- قسم المودات -->
+  <section id="mods" class="section">
+    <h2>🔵 مودات ماينكرافت</h2>
+    <div class="slider">
+
+      <div class="card">
+        <h3>مود الأسلحة</h3>
+        <p>مود يضيف أسلحة جديدة لزيادة متعة القتال.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/asdf9999" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a href="downloads/weapons-mod.zip" class="btn">تحميل المود</a>
+      </div>
+
+      <div class="card">
+        <h3>مود Minimap</h3>
+        <p>يضيف خريطة مصغرة لتسهيل التنقل.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/qwer8888" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a href="downloads/minimap.zip" class="btn">تحميل المود</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 مكتبة ماينكرافت | جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script>
+    // البحث بالكلمات
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".card");
+
+    searchInput.addEventListener("keyup", function() {
+      const query = this.value.toLowerCase();
+
+      cards.forEach(card => {
+        const title = card.querySelector("h3").innerText.toLowerCase();
+        const desc = card.querySelector("p").innerText.toLowerCase();
+
+        if (title.includes(query) || desc.includes(query)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
